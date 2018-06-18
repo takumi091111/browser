@@ -34,7 +34,8 @@
             Padding="2"
             Grid.Row="0"
             Grid.Column="0"
-            Grid.ColumnSpan="3"/>
+            Grid.ColumnSpan="3"
+            KeyDown="AddressBar_KeyDown"/>
         <ListView
             Name="TabList"
             Background="#212121"
