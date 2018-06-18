@@ -23,6 +23,11 @@ namespace Browser
         public MainWindow()
         {
             InitializeComponent();
+
+            var webView = new WebBrowser();
+            webView.SetValue(Grid.RowProperty, 1);
+            webView.SetValue(Grid.ColumnProperty, 2);
+            mGrid.Children.Add(webView);
         }
     }
 }

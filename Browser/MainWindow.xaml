@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Browser"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Browser"
+        Width="800"
+        Height="600">
+    <Grid
+        Name="mGrid"
+        Background="#212121">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox
+            TextWrapping="NoWrap"
+            x:Name="AddressBar"
+            FontSize="14"
+            Background="#212121"
+            Foreground="#9F9FA1"
+            BorderBrush="#29292A"
+            SelectionBrush="#29292A"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Margin="3,3,3,3"
+            Padding="2"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"/>
+        <ListView
+            Name="TabList"
+            Background="#212121"
+            Foreground="#9F9FA1"
+            BorderBrush="#29292A"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Grid.Row="1"
+            Grid.Column="0"/>
+        <GridSplitter
+            Background="#212121"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="1"/>
     </Grid>
 </Window>
