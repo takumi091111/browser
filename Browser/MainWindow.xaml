@@ -16,13 +16,13 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="200" MinWidth="200"/>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <TextBox
-            TextWrapping="NoWrap"
             x:Name="AddressBar"
+            TextWrapping="NoWrap"
             FontSize="14"
             Background="#212121"
             Foreground="#9F9FA1"
@@ -51,6 +51,6 @@
             VerticalAlignment="Stretch"
             Grid.Row="1"
             Grid.Column="1"
-            Width="1"/>
+            Width="3"/>
     </Grid>
 </Window>

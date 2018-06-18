@@ -24,13 +24,13 @@ namespace Browser
     public partial class MainWindow : Window
     {
         const string URL_REGEXP = @"^https?:\/\/[\w\/:%#\$&\?\(\)~\.=\+\-]+";
-        WebView webView;
+        WebBrowser webView;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            webView = new WebView();
+            webView = new WebBrowser();
             webView.SetValue(Grid.RowProperty, 1);
             webView.SetValue(Grid.ColumnProperty, 2);
             mGrid.Children.Add(webView);
