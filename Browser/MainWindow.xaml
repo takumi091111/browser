@@ -9,12 +9,20 @@
         Width="800"
         Height="600">
     <Window.CommandBindings>
-        <CommandBinding Command="New" Executed="NewTab_Executed"/>
-        <CommandBinding Command="Close" Executed="CloseTab_Executed"/>
+        <CommandBinding
+            Command="New"
+            Executed="NewTab_Executed"/>
+        <CommandBinding
+            Command="Close" 
+            Executed="CloseTab_Executed"/>
     </Window.CommandBindings>
     <Window.InputBindings>
-        <KeyBinding Gesture="Ctrl+T" Command="New"/>
-        <KeyBinding Gesture="Ctrl+W" Command="Close"/>
+        <KeyBinding
+            Gesture="Ctrl+T"
+            Command="New"/>
+        <KeyBinding
+            Gesture="Ctrl+W"
+            Command="Close"/>
     </Window.InputBindings>
     <Window.DataContext>
         <local:ViewModel/>
@@ -23,13 +31,18 @@
         Name="mGrid"
         Background="#212121">
         <Grid.RowDefinitions>
-            <RowDefinition Height="32"/>
+            <RowDefinition
+                Height="32"/>
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" MinWidth="200"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition
+                Width="200"
+                MinWidth="200"/>
+            <ColumnDefinition
+                Width="Auto"/>
+            <ColumnDefinition
+                Width="*"/>
         </Grid.ColumnDefinitions>
         <TextBox
             x:Name="AddressBar"
@@ -65,8 +78,12 @@
             </ListView.ItemTemplate>
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
-                    <Setter Property="VerticalContentAlignment"  Value="Stretch"/>
-                    <Setter Property="HorizontalContentAlignment"  Value="Stretch"/>
+                    <Setter
+                        Property="VerticalContentAlignment"
+                        Value="Stretch"/>
+                    <Setter
+                        Property="HorizontalContentAlignment"
+                        Value="Stretch"/>
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>

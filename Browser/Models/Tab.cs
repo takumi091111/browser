@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Reactive.Bindings;
 using System.Windows.Controls;
 using System.Windows.Navigation;
-using Reactive.Bindings;
 
 namespace Browser.Models
 {
