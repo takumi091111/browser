@@ -62,7 +62,7 @@ namespace Browser
         private string GetSearchURL(string text)
         {
             // 文字列をURLエンコード
-            string encoded = HttpUtility.HtmlEncode(text);
+            string encoded = HttpUtility.UrlEncode(text);
             return $"https://www.google.com/search?q={encoded}";
         }
 
