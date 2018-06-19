@@ -8,6 +8,17 @@
         Title="Browser"
         Width="800"
         Height="600">
+    <Window.CommandBindings>
+        <CommandBinding Command="New" Executed="NewTab_Executed"/>
+        <CommandBinding Command="Close" Executed="CloseTab_Executed"/>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Gesture="Ctrl+T" Command="New"/>
+        <KeyBinding Gesture="Ctrl+W" Command="Close"/>
+    </Window.InputBindings>
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
     <Grid
         Name="mGrid"
         Background="#212121">
@@ -37,14 +48,28 @@
             Grid.ColumnSpan="3"
             KeyDown="AddressBar_KeyDown"/>
         <ListView
-            Name="TabList"
+            Name="TabView"
             Background="#212121"
             Foreground="#9F9FA1"
             BorderBrush="#29292A"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"
             Grid.Row="1"
-            Grid.Column="0"/>
+            Grid.Column="0"
+            ItemsSource="{Binding Path=TabList}"
+            SelectionChanged="TabView_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Title.Value}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="VerticalContentAlignment"  Value="Stretch"/>
+                    <Setter Property="HorizontalContentAlignment"  Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
         <GridSplitter
             Background="#212121"
             HorizontalAlignment="Stretch"
